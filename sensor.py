@@ -56,9 +56,9 @@ class Sensor():
         self.client.send_message(self.message())
 
 
-sensor = Sensor(conn)
-sensor.connect()
-sensor.setData('temperature')
+# sensor = Sensor(conn)
+# sensor.connect()
+# sensor.setData('temperature')
 
 # i = 0
 # while i <= 10:
