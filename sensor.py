@@ -4,12 +4,6 @@ import json
 from azure.iot.device import IoTHubDeviceClient, Message
 import configparser
 
-
-config = configparser.ConfigParser()
-config.read('config.ini')
-conn = config['iot_conn']['conn']
-
-
 class Sensor():
     def __init__(self, conn):
         self.conn = conn
@@ -54,15 +48,3 @@ class Sensor():
     # send message using client
     def sendMessage(self):
         self.client.send_message(self.message())
-
-
-# sensor = Sensor(conn)
-# sensor.connect()
-# sensor.setData('temperature')
-
-# i = 0
-# while i <= 10:
-#     sensor.showMessage()
-#     sensor.sendMessage()
-#     time.sleep(10)
-#     i += 1

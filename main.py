@@ -17,6 +17,6 @@ sensor.setData('temperature')
 i = 0
 while i <= 10:
     sensor.showMessage()
-    # sensor.sendMessage()
+    sensor.sendMessage()
     time.sleep(10)
     i += 1
